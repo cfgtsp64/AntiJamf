@@ -11,15 +11,7 @@ APP_1="JamfDaemon"
 APP_2="JamfProCommService"
 
 for (( ; ; )) do
-	if [ $(pidof $APP_0) ] then
-		sudo kill -9 $(pidof $APP_0) > /dev/null
-	fi
-	
-	if [ $(pidof $APP_1) ] then
-		sudo kill -9 $(pidof $APP_1) > /dev/null
-	fi
-	
-	if [ $(pidof $APP_2) ] then
-		sudo kill -9 $(pidof $APP_2) > /dev/null
-	fi
+	sudo kill -9 $(pidof $APP_0) > /dev/null
+	sudo kill -9 $(pidof $APP_1) > /dev/null
+	sudo kill -9 $(pidof $APP_2) > /dev/null
 done
