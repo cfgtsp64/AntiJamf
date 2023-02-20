@@ -1,4 +1,4 @@
-# AntiJamf program for MacOS (works with Catalina-Ventura on both Intel and Silicon)
+# AntiJamf program for MacOS (works with Catalina-Ventura on both Intel and Silicon, won't work on linux because its a MacOS MDM)
 # Make sure homebrew is installed and you have installed 'pidof' (if not, run 'brew install pidof')
 # Written by cfgtsp5192, have fun with your unrestricted device
 
