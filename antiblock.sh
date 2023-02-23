@@ -2,9 +2,9 @@
 # Make sure homebrew is installed and you have installed 'pidof' (if not, run 'brew install pidof')
 
 # ----------------------- #
-# 			  #
+#                         #
 #  Written by cfgtsp5192  #
-#			  #
+#                         #
 # ----------------------- #
 
 #!/bin/bash
