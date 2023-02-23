@@ -4,14 +4,9 @@
 
 #!/bin/bash
 
-sudo echo "true"
-
-APP_0="jamf"
-APP_1="JamfDaemon"
-APP_2="JamfProCommService"
-
-for (( ; ; )) do
-	sudo kill -9 $(pidof $APP_0) > /dev/null
-	sudo kill -9 $(pidof $APP_1) > /dev/null
-	sudo kill -9 $(pidof $APP_2) > /dev/null
+for (( ; ; )) do 
+    sudo kill -9 $(pidof jamf) > /dev/null
+    sudo kill -9 $(pidof jamfHelper) > /dev/null
+    sudo kill -9 $(pidof JamfDaemon) > /dev/null
+    sudo kill -9 $(pidof JamfProCommService) > /dev/null
 done
