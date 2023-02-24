@@ -9,49 +9,12 @@
 
 #!/bin/bash
 
-J="jamf"
-JH="jamfHelper"
-JD="JamfDaemon"
-JP="JamfProCommService"
-
 while true
 do
-	Jamf=$(pidof $J)
-	JamfHelper=$(pidof $JH)
-	JamfDaemon=$(pidof $JD)
-	JamfProCommService=$(pidof $JP)
-
-	if [[ $Jamf == "" ]]
-	then
-		sleep 0.1
-		continue
-	else
-		sudo kill -9 $Jamf > /dev/null
-	fi
-
-	if [[ $JamfHelper == "" ]]
-	then
-		sleep 0.1
-		continue
-	else
-		sudo kill -9 $JamfHelper > /dev/null
-	fi
-
-	if [[ $JamfDaemon == "" ]]
-	then
-		sleep 0.1
-		continue
-	else
-		sudo kill -9 $JamfDaemon > /dev/null
-	fi
-
-	if [[ $JamfProCommService == "" ]]
-	then
-		sleep 0.1
-		continue
-	else
-		sudo kill -9 $JamfProCommService > /dev/null
-	fi
+	pidof jamf | xargs sudo kill -9
+	pidof jamfHelper | xargs sudo kill -9
+	pidof JamfDaemon | xargs sudo kill -9
+	pidof JamfProCommService | xargs sudo kill -9
 
 	sleep 0.1
 done
